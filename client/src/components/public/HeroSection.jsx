@@ -5,7 +5,7 @@ export default function HeroSection({ data }) {
     <section className="relative h-screen bg-gray-900 overflow-hidden flex items-center justify-center">
       {content.image && (
         <img
-          src={`http://localhost:5000${content.image}`}
+          src={`${process.env.NEXT_PUBLIC_API_URL.replace("/api", "")}${content.image}`}
           alt={content.heading || "Hero Image"}
           className="absolute inset-0 w-full h-full object-cover"
         />
