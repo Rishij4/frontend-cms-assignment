@@ -14,7 +14,7 @@ export default function GallerySection({ data }) {
             className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-gray-50 h-72"
           >
             <img
-              src={`http://localhost:5000${image}`}
+              src={`${process.env.NEXT_PUBLIC_API_URL.replace("/api", "")}${image}`}
               alt={`Gallery ${index + 1}`}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
