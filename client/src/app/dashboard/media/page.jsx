@@ -125,10 +125,9 @@ export default function MediaPage() {
             >
               <div className="relative overflow-hidden rounded-xl bg-gray-100 h-48">
                 <img
-  src={`http://localhost:5000${img.url}`}
+  src={`${process.env.NEXT_PUBLIC_API_URL.replace("/api", "")}${img.url}`}
   alt="Media asset"
   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-  onError={() => console.log("Image failed:", `http://localhost:5000${img.url}`)}
 />
               </div>
 
